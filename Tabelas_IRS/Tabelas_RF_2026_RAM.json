@@ -1,0 +1,1002 @@
+{
+  "year": 2026,
+  "region": "madeira",
+  "sourceFile": "Tabelas_RF_2026_RAM.xlsx",
+  "tables": [
+    {
+      "name": "Tabela I - Trabalho dependente",
+      "category": "Não casado sem dependentes ou casado 2 titulares",
+      "rows": [
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": null,
+            "maxInclusive": 980
+          },
+          "taxaMarginalMaxima": 0,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 0
+          },
+          "parcelaAdicionalDependente": 0,
+          "taxaEfetivaMensalLimiteEscalao": 0
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 980,
+            "maxInclusive": 1028
+          },
+          "taxaMarginalMaxima": 0.0872,
+          "parcelaAAbater": {
+            "type": "formula",
+            "coefficient": 0.0872,
+            "multiplier": 2.6,
+            "referenceBase": 1356.92,
+            "expression": "0.0872 x 2.6 x (1356.92 - R)"
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.015
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1028,
+            "maxInclusive": 1099
+          },
+          "taxaMarginalMaxima": 0.1204,
+          "parcelaAAbater": {
+            "type": "formula",
+            "coefficient": 0.1204,
+            "multiplier": 1.35,
+            "referenceBase": 1696.78,
+            "expression": "0.1204 x 1.35 x (1696.78 - R)"
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.032
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1099,
+            "maxInclusive": 1201
+          },
+          "taxaMarginalMaxima": 0.1204,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 97.17
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.039
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1201,
+            "maxInclusive": 1623
+          },
+          "taxaMarginalMaxima": 0.1763,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 164.31
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.075
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1623,
+            "maxInclusive": 2332
+          },
+          "taxaMarginalMaxima": 0.223,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 240.10999999999999
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.12
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 2332,
+            "maxInclusive": 3203
+          },
+          "taxaMarginalMaxima": 0.2242,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 242.91
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.148
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 3203,
+            "maxInclusive": 3614
+          },
+          "taxaMarginalMaxima": 0.2727,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 398.26
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.163
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 3614,
+            "maxInclusive": 6585
+          },
+          "taxaMarginalMaxima": 0.2778,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 416.7
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.215
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 6585,
+            "maxInclusive": 6954
+          },
+          "taxaMarginalMaxima": 0.2802,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 432.51
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.218
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 6954,
+            "maxInclusive": 21411
+          },
+          "taxaMarginalMaxima": 0.2924,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 517.35
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.268
+        },
+        {
+          "rangeLabel": "Superior a",
+          "range": {
+            "minExclusive": 21411,
+            "maxInclusive": null
+          },
+          "taxaMarginalMaxima": 0.3278,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 1275.3
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": null
+        }
+      ],
+      "formula": "(Remuneração mensal x Taxa) - Parcela a abater - (Parcela adicional a abater x nº dependentes).",
+      "legend": "R = Remuneração mensal."
+    },
+    {
+      "name": "Tabela II - Trabalho dependente",
+      "category": "Não casado com um ou mais dependentes",
+      "rows": [
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": null,
+            "maxInclusive": 980
+          },
+          "taxaMarginalMaxima": 0,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 0
+          },
+          "parcelaAdicionalDependente": 0,
+          "taxaEfetivaMensalLimiteEscalao": 0
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 980,
+            "maxInclusive": 1028
+          },
+          "taxaMarginalMaxima": 0.0872,
+          "parcelaAAbater": {
+            "type": "formula",
+            "coefficient": 0.0872,
+            "multiplier": 2.6,
+            "referenceBase": 1356.92,
+            "expression": "0.0872 x 2.6 x (1356.92 - R)"
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": 0.015
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1028,
+            "maxInclusive": 1099
+          },
+          "taxaMarginalMaxima": 0.1204,
+          "parcelaAAbater": {
+            "type": "formula",
+            "coefficient": 0.1204,
+            "multiplier": 1.35,
+            "referenceBase": 1696.78,
+            "expression": "0.1204 x 1.35 x (1696.78 - R)"
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": 0.032
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1099,
+            "maxInclusive": 1201
+          },
+          "taxaMarginalMaxima": 0.1204,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 97.17
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": 0.039
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1201,
+            "maxInclusive": 1623
+          },
+          "taxaMarginalMaxima": 0.1763,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 164.31
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": 0.075
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1623,
+            "maxInclusive": 2332
+          },
+          "taxaMarginalMaxima": 0.223,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 240.10999999999999
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": 0.12
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 2332,
+            "maxInclusive": 3203
+          },
+          "taxaMarginalMaxima": 0.2242,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 242.91
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": 0.148
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 3203,
+            "maxInclusive": 3614
+          },
+          "taxaMarginalMaxima": 0.2727,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 398.26
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": 0.163
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 3614,
+            "maxInclusive": 6585
+          },
+          "taxaMarginalMaxima": 0.2778,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 416.7
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": 0.215
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 6585,
+            "maxInclusive": 6954
+          },
+          "taxaMarginalMaxima": 0.2802,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 432.51
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": 0.218
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 6954,
+            "maxInclusive": 21411
+          },
+          "taxaMarginalMaxima": 0.2924,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 517.35
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": 0.268
+        },
+        {
+          "rangeLabel": "Superior a",
+          "range": {
+            "minExclusive": 21411,
+            "maxInclusive": null
+          },
+          "taxaMarginalMaxima": 0.3278,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 1275.3
+          },
+          "parcelaAdicionalDependente": 34.29,
+          "taxaEfetivaMensalLimiteEscalao": null
+        }
+      ],
+      "formula": "(Remuneração mensal x Taxa) - Parcela a abater - (Parcela adicional a abater x nº dependentes).",
+      "legend": "R = Remuneração mensal."
+    },
+    {
+      "name": "Tabela III - Trabalho dependente",
+      "category": "Casado, único titular",
+      "rows": [
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": null,
+            "maxInclusive": 997
+          },
+          "taxaMarginalMaxima": 0,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 0
+          },
+          "parcelaAdicionalDependente": 0,
+          "taxaEfetivaMensalLimiteEscalao": 0
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 997,
+            "maxInclusive": 1099
+          },
+          "taxaMarginalMaxima": 0.0872,
+          "parcelaAAbater": {
+            "type": "formula",
+            "coefficient": 0.0872,
+            "multiplier": 1.35,
+            "referenceBase": 1819.64,
+            "expression": "0.0872 x 1.35 x (1819.64 - R)"
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.01
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1099,
+            "maxInclusive": 1141
+          },
+          "taxaMarginalMaxima": 0.0872,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 84.84
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.013
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1141,
+            "maxInclusive": 1857
+          },
+          "taxaMarginalMaxima": 0.1033,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 103.22
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.048
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 1857,
+            "maxInclusive": 2485
+          },
+          "taxaMarginalMaxima": 0.1091,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 114
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.063
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 2485,
+            "maxInclusive": 3331
+          },
+          "taxaMarginalMaxima": 0.1236,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 150.04
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.079
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 3331,
+            "maxInclusive": 3895
+          },
+          "taxaMarginalMaxima": 0.1404,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 206.01
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.088
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 3895,
+            "maxInclusive": 6673
+          },
+          "taxaMarginalMaxima": 0.1595,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 280.40999999999997
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.117
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 6673,
+            "maxInclusive": 6878
+          },
+          "taxaMarginalMaxima": 0.2213,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 692.81
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.121
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 6878,
+            "maxInclusive": 21411
+          },
+          "taxaMarginalMaxima": 0.2493,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 885.4
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.208
+        },
+        {
+          "rangeLabel": "Superior a",
+          "range": {
+            "minExclusive": 21411,
+            "maxInclusive": null
+          },
+          "taxaMarginalMaxima": 0.3278,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 2566.17
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": null
+        }
+      ],
+      "formula": "(Remuneração mensal x Taxa) - Parcela a abater - (Parcela adicional a abater x nº dependentes).",
+      "legend": "R = Remuneração mensal."
+    },
+    {
+      "name": "Tabela IV - Trabalho dependente",
+      "category": "Não casado ou casado dois titulares sem dependentes - Pessoa com deficiência",
+      "rows": [
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": null,
+            "maxInclusive": 2053
+          },
+          "taxaMarginalMaxima": 0,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 0
+          },
+          "parcelaAdicionalDependente": null,
+          "taxaEfetivaMensalLimiteEscalao": 0
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 2053,
+            "maxInclusive": 2591
+          },
+          "taxaMarginalMaxima": 0.149,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 305.9
+          },
+          "parcelaAdicionalDependente": null,
+          "taxaEfetivaMensalLimiteEscalao": 0.031
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 2591,
+            "maxInclusive": 3622
+          },
+          "taxaMarginalMaxima": 0.1863,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 402.55
+          },
+          "parcelaAdicionalDependente": null,
+          "taxaEfetivaMensalLimiteEscalao": 0.075
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 3622,
+            "maxInclusive": 4668
+          },
+          "taxaMarginalMaxima": 0.2289,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 556.85
+          },
+          "parcelaAdicionalDependente": null,
+          "taxaEfetivaMensalLimiteEscalao": 0.11
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 4668,
+            "maxInclusive": 7066
+          },
+          "taxaMarginalMaxima": 0.2616,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 709.5
+          },
+          "parcelaAdicionalDependente": null,
+          "taxaEfetivaMensalLimiteEscalao": 0.161
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 7066,
+            "maxInclusive": 7168
+          },
+          "taxaMarginalMaxima": 0.2752,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 805.6
+          },
+          "parcelaAdicionalDependente": null,
+          "taxaEfetivaMensalLimiteEscalao": 0.163
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 7168,
+            "maxInclusive": 21625
+          },
+          "taxaMarginalMaxima": 0.3058,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 1024.95
+          },
+          "parcelaAdicionalDependente": null,
+          "taxaEfetivaMensalLimiteEscalao": 0.258
+        },
+        {
+          "rangeLabel": "Superior a",
+          "range": {
+            "minExclusive": 21625,
+            "maxInclusive": null
+          },
+          "taxaMarginalMaxima": 0.3278,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 1500.7
+          },
+          "parcelaAdicionalDependente": null,
+          "taxaEfetivaMensalLimiteEscalao": null
+        }
+      ],
+      "formula": "(Remuneração mensal x Taxa) - Parcela a abater.",
+      "legend": null
+    },
+    {
+      "name": "Tabela V - Trabalho dependente",
+      "category": "Não casado com um ou mais dependentes - Pessoa com deficiência",
+      "rows": [
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": null,
+            "maxInclusive": 2345
+          },
+          "taxaMarginalMaxima": 0,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 0
+          },
+          "parcelaAdicionalDependente": 0,
+          "taxaEfetivaMensalLimiteEscalao": 0
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 2345,
+            "maxInclusive": 2591
+          },
+          "taxaMarginalMaxima": 0.1382,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 324.08
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.013
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 2591,
+            "maxInclusive": 3622
+          },
+          "taxaMarginalMaxima": 0.1863,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 448.71
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.062
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 3622,
+            "maxInclusive": 4668
+          },
+          "taxaMarginalMaxima": 0.2289,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 603.01
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.1
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 4668,
+            "maxInclusive": 7066
+          },
+          "taxaMarginalMaxima": 0.2616,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 755.66
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.155
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 7066,
+            "maxInclusive": 7168
+          },
+          "taxaMarginalMaxima": 0.2752,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 851.76
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.156
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 7168,
+            "maxInclusive": 21625
+          },
+          "taxaMarginalMaxima": 0.3058,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 1071.11
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.256
+        },
+        {
+          "rangeLabel": "Superior a",
+          "range": {
+            "minExclusive": 21625,
+            "maxInclusive": null
+          },
+          "taxaMarginalMaxima": 0.3278,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 1546.86
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": null
+        }
+      ],
+      "formula": "(Remuneração mensal x Taxa) - Parcela a abater - (Parcela adicional a abater x nº dependentes).",
+      "legend": null
+    },
+    {
+      "name": "Tabela VI - Trabalho dependente",
+      "category": "Casado dois titulares com um ou mais dependentes - Pessoa com deficiência",
+      "rows": [
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": null,
+            "maxInclusive": 2019
+          },
+          "taxaMarginalMaxima": 0,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 0
+          },
+          "parcelaAdicionalDependente": 0,
+          "taxaEfetivaMensalLimiteEscalao": 0
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 2019,
+            "maxInclusive": 2528
+          },
+          "taxaMarginalMaxima": 0.1566,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 316.18
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.032
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 2528,
+            "maxInclusive": 3049
+          },
+          "taxaMarginalMaxima": 0.1768,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 367.25
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.056
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 3049,
+            "maxInclusive": 4272
+          },
+          "taxaMarginalMaxima": 0.1781,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 371.21999999999997
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.091
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 4272,
+            "maxInclusive": 5734
+          },
+          "taxaMarginalMaxima": 0.228,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 584.4
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.126
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 5734,
+            "maxInclusive": 7066
+          },
+          "taxaMarginalMaxima": 0.2595,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 765.03
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.151
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 7066,
+            "maxInclusive": 7550
+          },
+          "taxaMarginalMaxima": 0.2752,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 875.97
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.159
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 7550,
+            "maxInclusive": 21625
+          },
+          "taxaMarginalMaxima": 0.3058,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 1107
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": 0.255
+        },
+        {
+          "rangeLabel": "Superior a",
+          "range": {
+            "minExclusive": 21625,
+            "maxInclusive": null
+          },
+          "taxaMarginalMaxima": 0.3278,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 1582.75
+          },
+          "parcelaAdicionalDependente": 21.43,
+          "taxaEfetivaMensalLimiteEscalao": null
+        }
+      ],
+      "formula": "(Remuneração mensal x Taxa) - Parcela a abater - (Parcela adicional a abater x nº dependentes).",
+      "legend": null
+    },
+    {
+      "name": "Tabela VII - Trabalho dependente",
+      "category": "Casado, único titular - Pessoa com deficiência",
+      "rows": [
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": null,
+            "maxInclusive": 3061
+          },
+          "taxaMarginalMaxima": 0,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 0
+          },
+          "parcelaAdicionalDependente": 0,
+          "taxaEfetivaMensalLimiteEscalao": 0
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 3061,
+            "maxInclusive": 4668
+          },
+          "taxaMarginalMaxima": 0.0883,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 270.28999999999996
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.03
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 4668,
+            "maxInclusive": 7066
+          },
+          "taxaMarginalMaxima": 0.1334,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 480.82
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.065
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 7066,
+            "maxInclusive": 7168
+          },
+          "taxaMarginalMaxima": 0.2503,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 1306.84
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.068
+        },
+        {
+          "rangeLabel": "Até",
+          "range": {
+            "minExclusive": 7168,
+            "maxInclusive": 21625
+          },
+          "taxaMarginalMaxima": 0.281,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 1526.9
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": 0.21
+        },
+        {
+          "rangeLabel": "Superior a",
+          "range": {
+            "minExclusive": 21625,
+            "maxInclusive": null
+          },
+          "taxaMarginalMaxima": 0.3278,
+          "parcelaAAbater": {
+            "type": "fixed",
+            "amount": 2538.95
+          },
+          "parcelaAdicionalDependente": 42.86,
+          "taxaEfetivaMensalLimiteEscalao": null
+        }
+      ],
+      "formula": "(Remuneração mensal x Taxa) - Parcela a abater - (Parcela adicional a abater x nº dependentes).",
+      "legend": null
+    }
+  ]
+}

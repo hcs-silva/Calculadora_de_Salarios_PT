@@ -1,0 +1,13 @@
+{
+  "name": "excel-parser",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "parse": "node parser.js",
+    "salary": "node net-salary.js",
+    "serve": "node serve.js"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Salário Líquido</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">Portugal 2026</span>
+        <h1>Salário líquido mensal, sem adivinhações.</h1>
+        <p>
+          Esta calculadora recolhe o contexto do trabalhador, compõe o salário
+          bruto a partir dos componentes salariais e aplica retenção de IRS e
+          Segurança Social (11%) para calcular o salário líquido.
+        </p>
+      </section>
+
+      <section class="panel">
+        <form data-calculator-form>
+          <fieldset class="group">
+            <legend>Perfil Pessoal</legend>
+            <div class="field">
+              <label for="irs-region">Região das tabelas IRS</label>
+              <select id="irs-region" data-irs-region>
+                <option value="continente" selected>Continente</option>
+                <option value="madeira">Madeira (RAM)</option>
+                <option value="acores">Açores (RAA)</option>
+              </select>
+            </div>
+
+            <div class="radio-row profile-main-row">
+              <label
+                ><input
+                  type="radio"
+                  name="deficiencia"
+                  id="sem-deficiencia"
+                  checked
+                />
+                Sem deficiência</label
+              >
+              <label
+                ><input type="radio" name="deficiencia" id="deficiencia" /> Com
+                deficiência</label
+              >
+              <label class="align-right"
+                ><input type="checkbox" data-enable-final-settlement /> Ativar
+                acerto final</label
+              >
+            </div>
+
+            <div data-household-non-disabled>
+              <label class="profile-subtitle"
+                >Tipo de agregado (sem deficiência)</label
+              >
+              <div class="radio-row profile-household-row household-3">
+                <label
+                  ><input type="radio" name="agregado" id="tableOne" checked />
+                  Tabela I</label
+                >
+                <label
+                  ><input type="radio" name="agregado" id="tableTwo" /> Tabela
+                  II</label
+                >
+                <label
+                  ><input type="radio" name="agregado" id="tableThree" /> Tabela
+                  III</label
+                >
+              </div>
+            </div>
+
+            <div data-household-disabled hidden>
+              <label class="profile-subtitle"
+                >Tipo de agregado (com deficiência)</label
+              >
+              <div class="radio-row profile-household-row household-4">
+                <label
+                  ><input type="radio" name="agregado" id="tableFour" /> Tabela
+                  IV</label
+                >
+                <label
+                  ><input type="radio" name="agregado" id="tableFive" /> Tabela
+                  V</label
+                >
+                <label
+                  ><input type="radio" name="agregado" id="tableSix" /> Tabela
+                  VI</label
+                >
+                <label
+                  ><input type="radio" name="agregado" id="tableSeven" /> Tabela
+                  VII</label
+                >
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="group" data-final-settlement-fields hidden>
+            <legend>Acerto Final</legend>
+            <div class="split">
+              <div class="field">
+                <label for="admission-date">Data de admissão</label>
+                <input
+                  id="admission-date"
+                  data-admission-date
+                  type="date"
+                  value="2024-01-01"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="termination-date">Data de cessação</label>
+                <input
+                  id="termination-date"
+                  data-termination-date
+                  type="date"
+                  value="2026-05-17"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="split">
+              <div class="field">
+                <label for="vacation-taken-vested"
+                  >Dias de férias vencidas já gozados</label
+                >
+                <input
+                  id="vacation-taken-vested"
+                  data-vacation-taken-vested
+                  type="number"
+                  min="0"
+                  step="0.5"
+                  value="0"
+                />
+              </div>
+              <div class="field">
+                <label for="vacation-taken-proportional"
+                  >Dias de férias proporcionais já gozados</label
+                >
+                <input
+                  id="vacation-taken-proportional"
+                  data-vacation-taken-proportional
+                  type="number"
+                  min="0"
+                  step="0.5"
+                  value="0"
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="seniority-extra-vacation-days"
+                >Dias extra de férias por antiguidade</label
+              >
+              <input
+                id="seniority-extra-vacation-days"
+                data-seniority-extra-vacation-days
+                type="number"
+                min="0"
+                step="0.5"
+                value="0"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="group">
+            <legend>Regime de Trabalho</legend>
+            <div class="radio-row">
+              <label
+                ><input type="radio" name="time" id="full-time" checked /> Tempo
+                inteiro</label
+              >
+              <label
+                ><input type="radio" name="time" id="part-time" /> Tempo
+                parcial</label
+              >
+            </div>
+            <div class="field" data-weekly-hours-block hidden>
+              <label for="weekly-hours">Horas semanais (part-time)</label>
+              <input
+                id="weekly-hours"
+                data-weekly-hours
+                type="number"
+                min="1"
+                max="40"
+                step="0.5"
+                value="20"
+              />
+            </div>
+
+            <div class="radio-row">
+              <label
+                ><input type="radio" name="turnos" id="sem-turnos" checked />
+                Sem turnos</label
+              >
+              <label
+                ><input type="radio" name="turnos" id="por-turnos" /> Trabalho
+                por turnos</label
+              >
+            </div>
+            <div class="split" data-night-block hidden>
+              <div class="field">
+                <label for="night-hours">Horas noturnas</label>
+                <input
+                  id="night-hours"
+                  data-night-hours
+                  type="number"
+                  min="0"
+                  step="0.5"
+                  value="0"
+                />
+              </div>
+              <div class="field">
+                <label for="night-rate">Taxa de acréscimo noturno</label>
+                <input
+                  id="night-rate"
+                  data-night-rate
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  value="0.25"
+                />
+              </div>
+            </div>
+
+            <div class="radio-row">
+              <label
+                ><input type="radio" name="horas" id="nao-fez" checked /> Sem
+                horas extra</label
+              >
+              <label
+                ><input type="radio" name="horas" id="fez" /> Fez horas
+                extra</label
+              >
+            </div>
+            <div class="components-grid" data-overtime-block hidden>
+              <div class="field">
+                <label for="overtime-50">Horas extra 50%</label>
+                <input
+                  id="overtime-50"
+                  data-overtime-50
+                  type="number"
+                  min="0"
+                  step="0.5"
+                  value="0"
+                />
+              </div>
+              <div class="field">
+                <label for="overtime-75">Horas extra 75%</label>
+                <input
+                  id="overtime-75"
+                  data-overtime-75
+                  type="number"
+                  min="0"
+                  step="0.5"
+                  value="0"
+                />
+              </div>
+              <div class="field">
+                <label for="overtime-100">Horas extra 100%</label>
+                <input
+                  id="overtime-100"
+                  data-overtime-100
+                  type="number"
+                  min="0"
+                  step="0.5"
+                  value="0"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="group">
+            <legend>Remuneração e Subsídios</legend>
+            <div class="split">
+              <div class="field">
+                <label for="base-salary">Salário base</label>
+                <input
+                  id="base-salary"
+                  data-base-salary
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  value="1500"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="commissions">Comissões</label>
+                <input
+                  id="commissions"
+                  data-commissions
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  value="0"
+                />
+              </div>
+            </div>
+
+            <div class="split">
+              <div class="field">
+                <label for="worked-days">Dias trabalhados no mês</label>
+                <input
+                  id="worked-days"
+                  data-worked-days
+                  type="number"
+                  min="0"
+                  max="31"
+                  step="1"
+                  value="22"
+                />
+              </div>
+              <div class="field">
+                <label for="absence-hours">Horas de falta</label>
+                <input
+                  id="absence-hours"
+                  data-absence-hours
+                  type="number"
+                  min="0"
+                  step="0.5"
+                  value="0"
+                />
+              </div>
+            </div>
+
+            <div class="radio-row">
+              <label
+                ><input
+                  type="radio"
+                  name="subsidio-alim"
+                  id="nao-recebe"
+                  checked
+                />
+                Sem subsídio de alimentação</label
+              >
+              <label
+                ><input type="radio" name="subsidio-alim" id="recebe" /> Recebe
+                subsídio de alimentação</label
+              >
+            </div>
+            <div class="split" data-meal-block hidden>
+              <div class="field">
+                <label for="meal-daily">Subsídio de alimentação por dia</label>
+                <input
+                  id="meal-daily"
+                  data-meal-daily
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  value="0"
+                />
+              </div>
+              <div class="field" data-meal-type-block>
+                <label>Tipo de pagamento</label>
+                <div class="radio-row">
+                  <label
+                    ><input
+                      type="radio"
+                      name="tipo-pagamento"
+                      id="euroTicket"
+                      checked
+                    />
+                    Cartão/Ticket</label
+                  >
+                  <label
+                    ><input type="radio" name="tipo-pagamento" id="money" />
+                    Dinheiro</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="radio-row">
+              <label
+                ><input type="radio" name="radio" id="duodecimos" checked />
+                Modo duodécimos</label
+              >
+              <label
+                ><input type="radio" name="radio" id="nao-duodecimos" /> Modo
+                sem duodécimos</label
+              >
+            </div>
+
+            <div class="split" data-subsidy-paid-block hidden>
+              <div class="field">
+                <label>Subsídio de férias pago neste mês</label>
+                <div class="radio-row">
+                  <label
+                    ><input type="radio" name="checkboxF" id="pagoF" checked />
+                    Sim</label
+                  >
+                  <label
+                    ><input type="radio" name="checkboxF" id="nao-pagoF" />
+                    Não</label
+                  >
+                </div>
+              </div>
+              <div class="field">
+                <label>Subsídio de Natal pago neste mês</label>
+                <div class="radio-row">
+                  <label
+                    ><input type="radio" name="checkboxN" id="pagoN" checked />
+                    Sim</label
+                  >
+                  <label
+                    ><input type="radio" name="checkboxN" id="nao-pagoN" />
+                    Não</label
+                  >
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="split">
+            <div class="field">
+              <label for="pay-periods">Ciclo anual de pagamentos</label>
+              <select id="pay-periods" data-pay-periods>
+                <option value="12">12 pagamentos</option>
+                <option value="14">14 pagamentos</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="dependents">Dependentes</label>
+              <input
+                id="dependents"
+                data-dependents
+                type="number"
+                min="0"
+                step="1"
+                value="0"
+              />
+            </div>
+          </div>
+
+          <button type="submit">Calcular salário líquido</button>
+          <p class="status" data-status></p>
+        </form>
+
+        <section class="result" data-result hidden>
+          <h2>Resumo Estimado do Salário</h2>
+          <p class="net" data-output="netSalary"></p>
+          <p class="microcopy">
+            Salário líquido mensal. Totais anuais apresentados abaixo.
+          </p>
+          <dl class="detail">
+            <div>
+              <dt>Bruto composto</dt>
+              <dd data-output="grossIncome"></dd>
+            </div>
+            <div>
+              <dt>Total de componentes positivos</dt>
+              <dd data-output="componentsTotal"></dd>
+            </div>
+            <div>
+              <dt>Descontos por faltas</dt>
+              <dd data-output="absenceDeductions"></dd>
+            </div>
+            <div>
+              <dt>Bruto anual</dt>
+              <dd data-output="annualGrossIncome"></dd>
+            </div>
+            <div>
+              <dt>Segurança Social mensal</dt>
+              <dd data-output="socialSecurityAmount"></dd>
+            </div>
+            <div>
+              <dt>Segurança Social anual</dt>
+              <dd data-output="annualSocialSecurityAmount"></dd>
+            </div>
+            <div>
+              <dt>Retenção IRS mensal</dt>
+              <dd data-output="irsAmount"></dd>
+            </div>
+            <div>
+              <dt>Retenção IRS anual</dt>
+              <dd data-output="annualIrsAmount"></dd>
+            </div>
+            <div>
+              <dt>Líquido anual</dt>
+              <dd data-output="annualNetSalary"></dd>
+            </div>
+            <div>
+              <dt>Pagamentos por ano</dt>
+              <dd data-output="payPeriods"></dd>
+            </div>
+            <div>
+              <dt>Predefinição</dt>
+              <dd data-output="table"></dd>
+            </div>
+            <div>
+              <dt>Contexto</dt>
+              <dd data-output="context"></dd>
+            </div>
+            <div>
+              <dt>Escalão aplicado</dt>
+              <dd data-output="bracket"></dd>
+            </div>
+            <div>
+              <dt>Fórmula</dt>
+              <dd data-output="formula"></dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="result" data-final-settlement hidden>
+          <h2>Resumo do Acerto Final</h2>
+          <p class="net" data-output="finalSettlementTotal"></p>
+          <p class="microcopy">
+            Valor bruto estimado a receber na cessação do contrato.
+          </p>
+          <dl class="detail">
+            <div>
+              <dt>Contexto do acerto</dt>
+              <dd data-output="finalSettlementContext"></dd>
+            </div>
+            <div>
+              <dt>Detalhe linha a linha</dt>
+              <dd data-output="finalSettlementLines"></dd>
+            </div>
+          </dl>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
